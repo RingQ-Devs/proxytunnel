@@ -361,7 +361,7 @@ git push origin master
 /root/ringqproxy/update.sh
 
 # Option B — manual update
-git clone --depth 1 https://github.com/Cal4Care-Developers/proxytunnel.git /tmp/update-build
+git clone --depth 1 https://github.com/RingQ-Devs/proxytunnel.git /tmp/update-build
 chmod +x /tmp/update-build/sipproxy
 cp /tmp/update-build/sipproxy /root/ringqproxy/sipproxy
 git -C /tmp/update-build rev-parse --short HEAD > /root/ringqproxy/version.txt
@@ -388,7 +388,7 @@ ringqtunnel-status
 
 ```bash
 # Download and run installer
-curl -fsSL https://raw.githubusercontent.com/Cal4Care-Developers/proxytunnel/master/install.sh \
+curl -fsSL https://raw.githubusercontent.com/RingQ-Devs/proxytunnel/master/install.sh \
   -o /tmp/install.sh && chmod +x /tmp/install.sh && sudo /tmp/install.sh
 
 # Flags
@@ -401,7 +401,7 @@ sudo /tmp/install.sh --reinstall    # force re-download binary
 
 ```bash
 # Install provision API on NX Device (one-time)
-curl -fsSL https://raw.githubusercontent.com/Cal4Care-Developers/proxytunnel/master/nxdevice/setup-provision-api.sh \
+curl -fsSL https://raw.githubusercontent.com/RingQ-Devs/proxytunnel/master/nxdevice/setup-provision-api.sh \
   -o /tmp/setup.sh && chmod +x /tmp/setup.sh && sudo /tmp/setup.sh
 
 # Then your UI calls:
@@ -412,7 +412,7 @@ POST http://<device-lan-ip>:8099/api/configure
 ## 12. Uninstall
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Cal4Care-Developers/proxytunnel/master/uninstall.sh \
+curl -fsSL https://raw.githubusercontent.com/RingQ-Devs/proxytunnel/master/uninstall.sh \
   -o /tmp/uninstall.sh && chmod +x /tmp/uninstall.sh && sudo /tmp/uninstall.sh
 ```
 
